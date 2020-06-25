@@ -7,3 +7,4 @@
 web_app/mysite/media/read/students/*
 **/htmlcov/
 **/.idea/
+Documentation/
