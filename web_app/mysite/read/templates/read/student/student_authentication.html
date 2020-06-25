@@ -1,0 +1,15 @@
+{% extends "./student_base.html" %}
+{% block content %}
+ {% if photo_not_uploaded %}
+    <p>You have not uploaded a photo.</p>
+    <p>Please update your photo by going to the <a href="{% url 'student_photo_view' %}">photo page.</a></p>
+{% elif authenticated == 0 %}
+    <p>Facial recognition authentication failed.</p>
+    <p>Does not match profile photo</p>
+{% elif authenticated == 2 %}
+    <p>A face could not be detected in your profile photo.</p>
+    <p>Please update it to a picture which clearly shows your face.</p>
+{% elif authenticated == 3 %}
+    <p>Broken frames detected. Try to keep the camera still and reduce movement.</p>
+ {% endif %}
+{% endblock %}
