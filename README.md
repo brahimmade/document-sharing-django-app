@@ -15,7 +15,7 @@ Teachers are able to create classrooms and share documents with students within 
 * Make sure you have python3 installed
 * Create and source a virtual environment
 * `cd` to the directory: `document-sharing-django-app/web_app/`
-* Run `pip install -r requirements.txt`
+* Run `cat requirements.txt | xargs -n 1 pip install`
 * `cd` to `document-sharing-django-app/web_app/mysite/`
 * Run `python manage.py runserver --noreload --nothreading`
     * These options are necessary for facial recognition to work.
